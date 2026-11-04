@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description:
     "Diseñamos y desarrollamos experiencias digitales para empresas que quieren destacar, conectar y crecer.",
   applicationName: "NOVARY Digital Studio",
+  verification: {
+    google: "6rKvZd9XkAaPkztZ6N0iOC01UrQqhHMashCouQ5sdpk",
+  },
   openGraph: {
     type: "website",
     siteName: "NOVARY Digital Studio",
