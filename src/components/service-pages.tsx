@@ -122,7 +122,7 @@ export function ServicesCallout({ locale = "es" }: { locale?: Locale }) {
       />
       <p>{isEnglish ? "We will start with the problem, not a package." : "Empezamos por entender el reto, no por venderte un paquete."}</p>
       <WhatsAppLink locale={locale} message={isEnglish ? "I'd like to discuss a project." : "Quisiera conversar sobre un proyecto."}>
-        {isEnglish ? "Talk to NOVARY" : "Habla con NOVARY"}
+        {isEnglish ? "Talk to FANAMI" : "Habla con FANAMI"}
       </WhatsAppLink>
     </div>
   );

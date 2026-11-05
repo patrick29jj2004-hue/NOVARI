@@ -153,7 +153,7 @@ export function HomePage({ locale = "es" }: { locale?: Locale }) {
         <div className="split-layout">
           <div>
             <SectionHeading
-              eyebrow={isEnglish ? "The NOVARY approach" : "El enfoque NOVARY"}
+              eyebrow={isEnglish ? "The FANAMI approach" : "El enfoque FANAMI"}
               title={isEnglish ? "Good work starts with good questions." : "El buen trabajo empieza con buenas preguntas."}
               copy={isEnglish ? "We focus on the decisions that make digital products useful: clear goals, thoughtful design, reliable engineering and open communication." : "Nos enfocamos en las decisiones que hacen útil un producto digital: objetivos claros, diseño pensado, ingeniería confiable y comunicación abierta."}
               locale={locale}

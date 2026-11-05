@@ -22,9 +22,9 @@ export function AboutPage({ locale = "es" }: { locale?: Locale }) {
     <>
       <header className="page-hero">
         <div className="container">
-          <p className="eyebrow">{isEnglish ? "About NOVARY" : "Sobre NOVARY"}</p>
+          <p className="eyebrow">{isEnglish ? "About FANAMI" : "Sobre FANAMI"}</p>
           <h1 className="page-title">{isEnglish ? "Designing digital experiences with intent." : "Diseñamos experiencias digitales con intención."}</h1>
-          <p className="page-description">{isEnglish ? "NOVARY is a digital studio focused on web design, development and digital solutions for businesses ready to grow their online presence." : "NOVARY es un estudio digital enfocado en diseño, desarrollo web y soluciones digitales para empresas que quieren fortalecer su presencia online."}</p>
+          <p className="page-description">{isEnglish ? "FANAMI is a digital studio focused on web design, development and digital solutions for businesses ready to grow their online presence." : "FANAMI es un estudio digital enfocado en diseño, desarrollo web y soluciones digitales para empresas que quieren fortalecer su presencia online."}</p>
         </div>
       </header>
       <section className="container section">

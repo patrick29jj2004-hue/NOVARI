@@ -2,7 +2,7 @@
 
 ## Aplicación
 
-NOVARY usa Next.js App Router con TypeScript estricto. La mayor parte de las rutas y páginas se renderiza en servidor. Los componentes cliente se limitan a navegación móvil, formularios interactivos, selectores de demos y carrito local.
+FANAMI usa Next.js App Router con TypeScript estricto. La mayor parte de las rutas y páginas se renderiza en servidor. Los componentes cliente se limitan a navegación móvil, formularios interactivos, selectores de demos y carrito local.
 
 Las rutas en español no tienen prefijo; las rutas inglesas viven bajo `/en/[[...segments]]`. El selector de idioma conserva el pathname. El catálogo, servicios y demos comparten contenido y estructura localizados para reducir duplicación. `src/lib/content.ts` centraliza los servicios, paquetes y proyectos conceptuales.
 

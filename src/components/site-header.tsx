@@ -20,15 +20,15 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-inner">
         <Link
-          aria-label="NOVARY, inicio"
+          aria-label="FANAMI, inicio"
           className="brand"
           href={locale === "en" ? "/en" : "/"}
           onClick={() => setMenuOpen(false)}
         >
-          <span aria-hidden="true" className="brand-mark">N</span>
+          <span aria-hidden="true" className="brand-mark">F</span>
           <span>
-            NOVARY
-            <small>DIGITAL STUDIO</small>
+            FANAMI
+            <small>CREATIVE STUDIO</small>
           </span>
         </Link>
         <nav

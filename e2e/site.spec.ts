@@ -21,7 +21,7 @@ for (const [slug, name] of [
     await page.goto(`/work/${slug}`);
     await expect(page.getByRole("heading", { name, exact: true })).toBeVisible();
     await expect(page.getByText(/Proyecto conceptual — demo interactiva/)).toBeVisible();
-    await expect(page.getByRole("link", { name: /Volver a NOVARY/ })).toBeVisible();
+    await expect(page.getByRole("link", { name: /Volver a FANAMI/ })).toBeVisible();
   });
 }
 
@@ -150,9 +150,9 @@ test("catalog contains ten printable sheets", async ({ page }) => {
   await expect(page.getByRole("button", { name: /Imprimir/ })).toBeVisible();
   await expect(page.getByRole("link", { name: "Descargar PDF" })).toHaveAttribute(
     "href",
-    "/catalog/novary-catalog-es.pdf",
+    "/catalog/fanami-catalog-es.pdf",
   );
-  const pdfResponse = await page.request.get("/catalog/novary-catalog-es.pdf");
+  const pdfResponse = await page.request.get("/catalog/fanami-catalog-es.pdf");
   expect(pdfResponse.ok()).toBe(true);
   expect(pdfResponse.headers()["content-type"]).toContain("application/pdf");
 });

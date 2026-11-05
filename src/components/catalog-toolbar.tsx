@@ -11,7 +11,7 @@ export function CatalogToolbar({
   pdfAvailable: boolean;
 }) {
   const isEnglish = locale === "en";
-  const pdfPath = `/catalog/novary-catalog-${locale}.pdf`;
+  const pdfPath = `/catalog/fanami-catalog-${locale}.pdf`;
   return (
     <div className="catalog-toolbar">
       <p className="form-help">

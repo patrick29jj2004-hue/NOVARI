@@ -23,7 +23,7 @@ export function SiteLayout({
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "NOVARY Digital Studio",
+    name: "FANAMI Creative Studio",
     url: siteConfig.url,
     description: english
       ? "Digital studio focused on web design and development."

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Política de privacidad",
-  description: "Información sobre el tratamiento de datos en el sitio web de NOVARY.",
+  description: "Información sobre el tratamiento de datos en el sitio web de FANAMI.",
   alternates: { canonical: "/privacy", languages: { "es-PE": "/privacy", "en-US": "/en/privacy" } },
 };
 
