@@ -142,7 +142,7 @@ const categoryLabels: Record<Locale, Record<string, string>> = {
   en: { all: "All", outerwear: "Outerwear", essentials: "Essentials", accessories: "Accessories" },
 };
 
-const CART_KEY = "novary-demo-cart";
+const CART_KEY = "fanami-demo-cart";
 let cartSnapshot = "[]";
 const cartListeners = new Set<() => void>();
 
@@ -164,13 +164,13 @@ function subscribeToCart(listener: () => void) {
   cartListeners.add(listener);
   if (typeof window !== "undefined") {
     window.addEventListener("storage", listener);
-    window.addEventListener("novary-cart-change", listener);
+    window.addEventListener("fanami-cart-change", listener);
   }
   return () => {
     cartListeners.delete(listener);
     if (typeof window !== "undefined") {
       window.removeEventListener("storage", listener);
-      window.removeEventListener("novary-cart-change", listener);
+      window.removeEventListener("fanami-cart-change", listener);
     }
   };
 }
@@ -189,7 +189,7 @@ function writeCart(lines: CartLine[]) {
   } catch {
     persisted = false;
   }
-  window.dispatchEvent(new Event("novary-cart-change"));
+  window.dispatchEvent(new Event("fanami-cart-change"));
   return persisted;
 }
 
@@ -381,7 +381,7 @@ export function ProjectDemoPage({
     <>
       <header className="page-hero">
         <div className="container">
-          <Link className="arrow-link" href={back}>{isEnglish ? "← Back to NOVARY" : "← Volver a NOVARY"}</Link>
+          <Link className="arrow-link" href={back}>{isEnglish ? "← Back to FANAMI" : "← Volver a FANAMI"}</Link>
           <p className="eyebrow" style={{ marginTop: 30 }}>{isEnglish ? "Concept project — interactive demo" : "Proyecto conceptual — demo interactiva"}</p>
           <h1 className="page-title">{project.name}</h1>
           <p className="page-description">{project.type[locale]} · {project.description[locale]}</p>

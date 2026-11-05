@@ -62,27 +62,36 @@ try {
       sheets.some((sheet) => sheet.scrollHeight > sheet.clientHeight + 4),
     );
     if (overflow) throw new Error(`${route} contains content that overflows an A4 sheet.`);
-    const filePath = join(outputDirectory, `novary-catalog-${locale}.pdf`);
+    const fanamiFilePath = join(outputDirectory, `fanami-catalog-${locale}.pdf`);
     await page.pdf({
-      path: filePath,
+      path: fanamiFilePath,
       format: "A4",
       printBackground: true,
       preferCSSPageSize: true,
       displayHeaderFooter: false,
       margin: { top: "0", right: "0", bottom: "0", left: "0" },
     });
-    const document = await PDFDocument.load(await readFile(filePath));
+    const legacyFilePath = join(outputDirectory, `novary-catalog-${locale}.pdf`);
+    await page.pdf({
+      path: legacyFilePath,
+      format: "A4",
+      printBackground: true,
+      preferCSSPageSize: true,
+      displayHeaderFooter: false,
+      margin: { top: "0", right: "0", bottom: "0", left: "0" },
+    });
+    const document = await PDFDocument.load(await readFile(fanamiFilePath));
     const pdfPages = document.getPageCount();
     if (pdfPages !== 10) {
-      throw new Error(`${filePath} has ${pdfPages} PDF pages; expected 10.`);
+      throw new Error(`${fanamiFilePath} has ${pdfPages} PDF pages; expected 10.`);
     }
     const wrongPageSize = document.getPages().some((pdfPage) => {
       const { width, height } = pdfPage.getSize();
       return Math.abs(width - 595.28) > 2 || Math.abs(height - 841.89) > 2;
     });
-    if (wrongPageSize) throw new Error(`${filePath} contains a page that is not A4 portrait.`);
+    if (wrongPageSize) throw new Error(`${fanamiFilePath} contains a page that is not A4 portrait.`);
     if (errors.length) throw new Error(`Browser errors on ${route}: ${errors.join("; ")}`);
-    console.log(`Created ${filePath} (${pdfPages} pages).`);
+    console.log(`Created ${fanamiFilePath} (${pdfPages} pages).`);
     await page.close();
   }
 } catch (error) {

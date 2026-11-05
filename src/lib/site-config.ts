@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "NOVARY",
-  tagline: "Design. Develop. Grow.",
+  name: "FANAMI",
+  tagline: "Create. Connect. Grow.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   contactEmail: process.env.CONTACT_EMAIL || "",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "",

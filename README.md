@@ -1,8 +1,8 @@
-# NOVARY Digital Studio
+# FANAMI Creative Studio
 
 Sitio bilingüe (español e inglés) para un estudio digital. Incluye páginas de servicios, precios por cotización, cuatro demos conceptuales, formulario de contacto configurable y un catálogo imprimible A4.
 
-> NOVARY es un nombre comercial de trabajo. Este proyecto no confirma registro legal ni disponibilidad de dominios. MAREA, ATELIER, AUREN y VERTEX son conceptos de demostración, no clientes ni negocios reales.
+> FANAMI es el nombre actual del proyecto y mantiene compatibilidad con archivos y configuraciones heredadas para evitar cambios de entorno no previstos. MAREA, ATELIER, AUREN y VERTEX son conceptos de demostración, no clientes ni negocios reales.
 
 ## Requisitos
 
@@ -59,7 +59,7 @@ npx playwright install chromium
 npm run catalog:pdf
 ```
 
-El comando inicia temporalmente el servidor de desarrollo en `127.0.0.1:3178`, renderiza `/catalog` y `/en/catalog`, guarda `public/catalog/novary-catalog-es.pdf` y `public/catalog/novary-catalog-en.pdf`, valida diez páginas en cada uno y cierra el servidor. Si el puerto está ocupado, usa `NOVARY_PREVIEW_PORT` para elegir otro. La página ofrece la descarga solo cuando el PDF generado existe; mientras tanto, permite imprimir o guardar como PDF desde el navegador.
+El comando inicia temporalmente el servidor de desarrollo en `127.0.0.1:3178`, renderiza `/catalog` y `/en/catalog`, guarda `public/catalog/fanami-catalog-es.pdf` y `public/catalog/fanami-catalog-en.pdf` (con compatibilidad con los nombres heredados), valida diez páginas en cada uno y cierra el servidor. Si el puerto está ocupado, usa la variable de entorno de preview configurada por tu entorno. La página ofrece la descarga solo cuando el PDF generado existe; mientras tanto, permite imprimir o guardar como PDF desde el navegador.
 
 ## Build y despliegue
 

@@ -4,20 +4,20 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: "NOVARY — Digital Studio", template: "%s | NOVARY" },
+  title: { default: "FANAMI — Creative Studio", template: "%s | FANAMI" },
   description:
     "We design and build digital experiences that help businesses stand out, connect with customers and grow online.",
-  applicationName: "NOVARY Digital Studio",
+  applicationName: "FANAMI Creative Studio",
   openGraph: {
     type: "website",
-    siteName: "NOVARY Digital Studio",
-    title: "NOVARY — Design. Develop. Grow.",
+    siteName: "FANAMI Creative Studio",
+    title: "FANAMI — Create. Connect. Grow.",
     description: "Web design and development for businesses ready for their next step.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NOVARY — Digital Studio",
+    title: "FANAMI — Creative Studio",
     description: "Web design and development for businesses ready for their next step.",
   },
   alternates: {

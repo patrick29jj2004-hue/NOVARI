@@ -34,11 +34,11 @@ const pageDescriptions: Record<string, string> = {
   "/en/services": "Explore web design, e-commerce, custom development, digital growth and maintenance services.",
   "/en/work": "Explore interactive concept demos for restaurant, beauty, fashion and corporate websites.",
   "/en/pricing": "Explore digital service packages with project scope and pricing confirmed through a custom quote.",
-  "/en/about": "Learn about NOVARY Digital Studio and its approach to digital design and development.",
-  "/en/contact": "Contact NOVARY to discuss a website, e-commerce or custom software project.",
-  "/en/catalog": "Browse NOVARY's digital services catalog and download the printable PDF.",
-  "/en/privacy": "Read the NOVARY Digital Studio privacy policy and how contact form information is handled.",
-  "/en/terms": "Review the terms for using the NOVARY Digital Studio website and concept demos.",
+  "/en/about": "Learn about FANAMI Creative Studio and its approach to digital design and development.",
+  "/en/contact": "Contact FANAMI to discuss a website, e-commerce or custom software project.",
+  "/en/catalog": "Browse FANAMI's digital services catalog and download the printable PDF.",
+  "/en/privacy": "Read the FANAMI Creative Studio privacy policy and how contact form information is handled.",
+  "/en/terms": "Review the terms for using the FANAMI Creative Studio website and concept demos.",
 };
 
 export function generateStaticParams() {
@@ -68,17 +68,17 @@ export async function generateMetadata({
             "/en/services": "Digital services",
             "/en/work": "Concept projects",
             "/en/pricing": "Packages and quotes",
-            "/en/about": "About NOVARY",
+            "/en/about": "About FANAMI",
             "/en/contact": "Contact",
             "/en/catalog": "Commercial catalog",
             "/en/privacy": "Privacy policy",
             "/en/terms": "Terms and conditions",
-          }[path] ?? "NOVARY Digital Studio"),
+          }[path] ?? "FANAMI Creative Studio"),
     description:
       project?.description.en ??
       service?.short.en ??
       pageDescriptions[path] ??
-      "Explore NOVARY Digital Studio's web design, e-commerce and custom development services.",
+      "Explore FANAMI Creative Studio's web design, e-commerce and custom development services.",
     alternates: {
       canonical: path,
       languages: {
@@ -113,7 +113,7 @@ export default async function Page({
   if (segments.length === 1 && section === "about") return <AboutPage locale="en" />;
   if (segments.length === 1 && section === "contact") return <ContactPage email={siteConfig.contactEmail} locale="en" />;
   if (segments.length === 1 && section === "catalog") {
-    const pdfAvailable = existsSync(join(process.cwd(), "public", "catalog", "novary-catalog-en.pdf"));
+    const pdfAvailable = existsSync(join(process.cwd(), "public", "catalog", "fanami-catalog-en.pdf"));
     return <CatalogPage locale="en" pdfAvailable={pdfAvailable} />;
   }
   if (segments.length === 1 && section === "privacy") {
@@ -134,7 +134,7 @@ function LegalPage({ title }: { title: "Privacy policy" | "Terms and conditions"
         <h2>{privacy ? "Information received" : "Using this website"}</h2>
         <p>{privacy
           ? "This site does not use analytics or advertising cookies by default. If the contact form is configured, submitted details are sent to the configured email provider to answer the inquiry and are not stored in a site database."
-          : "NOVARY service descriptions are general. Scope, pricing, schedule, deliverables, licenses and support for a project are defined in a separate proposal and agreement."}</p>
+          : "FANAMI service descriptions are general. Scope, pricing, schedule, deliverables, licenses and support for a project are defined in a separate proposal and agreement."}</p>
         <h2>{privacy ? "Third-party services" : "Concept demos"}</h2>
         <p>{privacy
           ? "Email delivery may use Resend or another provider configured by the site operator. Its terms and processing locations should be reviewed before production."

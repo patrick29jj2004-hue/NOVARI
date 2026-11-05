@@ -3,8 +3,8 @@ import type { Locale } from "@/lib/content";
 
 const catalogPages: Record<Locale, { kicker: string; title: string; copy: string; blocks: [string, string][] }[]> = {
   es: [
-    { kicker: "01 · NOVARY DIGITAL STUDIO", title: "Design. Develop. Grow.", copy: "Experiencias digitales para negocios que quieren destacar, conectar y crecer online.", blocks: [["DISEÑO", "Interfaces claras y memorables."], ["DESARROLLO", "Tecnología pensada para el proyecto."]] },
-    { kicker: "02 · QUIÉNES SOMOS", title: "Diseño con intención. Tecnología con propósito.", copy: "NOVARY es un estudio digital enfocado en diseño, desarrollo web y soluciones digitales para empresas. La marca es un nombre comercial de trabajo; su registro legal y la disponibilidad de dominios no están confirmados.", blocks: [["ESTRATEGIA", "Entendemos el objetivo antes de elegir la solución."], ["COLABORACIÓN", "Comunicamos alcance, decisiones y siguientes pasos."]] },
+    { kicker: "01 · FANAMI CREATIVE STUDIO", title: "Create. Connect. Grow.", copy: "Experiencias digitales para negocios que quieren destacar, conectar y crecer online.", blocks: [["DISEÑO", "Interfaces claras y memorables."], ["DESARROLLO", "Tecnología pensada para el proyecto."]] },
+    { kicker: "02 · QUIÉNES SOMOS", title: "Diseño con intención. Tecnología con propósito.", copy: "FANAMI es un estudio digital enfocado en diseño, desarrollo web y soluciones digitales para empresas. Diseñamos marcas y experiencias que comunican con claridad y ayudan a crecer.", blocks: [["ESTRATEGIA", "Entendemos el objetivo antes de elegir la solución."], ["COLABORACIÓN", "Comunicamos alcance, decisiones y siguientes pasos."]] },
     { kicker: "03 · LANDING PAGES", title: "Una primera impresión que abre conversaciones.", copy: "Páginas enfocadas en explicar una propuesta de valor y ayudar a las personas a dar el siguiente paso.", blocks: [["INCLUYE", "Diseño responsive · contenido · formulario o contacto."], ["IDEAL PARA", "Lanzamientos, campañas y servicios específicos."]] },
     { kicker: "04 · WEB BUSINESS", title: "Tu negocio, explicado con claridad.", copy: "Una presencia multipágina para presentar la empresa, sus servicios y los motivos para elegirla.", blocks: [["INCLUYE", "Arquitectura de contenido · catálogo · formularios."], ["PREPARACIÓN", "SEO inicial, analítica y estructura escalable."]] },
     { kicker: "05 · WEB PREMIUM", title: "Una experiencia digital a tu medida.", copy: "Diseño UI/UX personalizado y funcionalidades específicas definidas junto a tu equipo.", blocks: [["INCLUYE", "Experiencia a medida · APIs · analítica."], ["ALCANCE", "Se define según requerimientos e integraciones."]] },
@@ -15,8 +15,8 @@ const catalogPages: Record<Locale, { kicker: string; title: string; copy: string
     { kicker: "10 · CONVERSEMOS", title: "¿Qué te gustaría hacer posible?", copy: "Cuéntanos sobre tu negocio y el reto que buscas resolver. La cotización se define luego de entender el alcance.", blocks: [["EMAIL", "Configura CONTACT_EMAIL para habilitar recepción."], ["WHATSAPP", "Configura NEXT_PUBLIC_WHATSAPP_NUMBER para habilitar el canal."]] },
   ],
   en: [
-    { kicker: "01 · NOVARY DIGITAL STUDIO", title: "Design. Develop. Grow.", copy: "Digital experiences for businesses ready to stand out, connect and grow online.", blocks: [["DESIGN", "Clear, memorable interfaces."], ["DEVELOPMENT", "Technology shaped around the project."]] },
-    { kicker: "02 · ABOUT", title: "Intentional design. Purposeful technology.", copy: "NOVARY is a digital studio focused on web design, development and digital solutions for businesses. NOVARY is a working brand name; legal registration and domain availability are not confirmed.", blocks: [["STRATEGY", "We understand the goal before choosing a solution."], ["PARTNERSHIP", "We communicate scope, decisions and next steps."]] },
+    { kicker: "01 · FANAMI CREATIVE STUDIO", title: "Create. Connect. Grow.", copy: "Digital experiences for businesses ready to stand out, connect and grow online.", blocks: [["DESIGN", "Clear, memorable interfaces."], ["DEVELOPMENT", "Technology shaped around the project."]] },
+    { kicker: "02 · ABOUT", title: "Intentional design. Purposeful technology.", copy: "FANAMI is a digital studio focused on web design, development and digital solutions for businesses. We build brands and experiences that communicate clearly and help companies grow.", blocks: [["STRATEGY", "We understand the goal before choosing a solution."], ["PARTNERSHIP", "We communicate scope, decisions and next steps."]] },
     { kicker: "03 · LANDING PAGES", title: "A first impression that starts a conversation.", copy: "Focused pages that explain a value proposition and help people take the next step.", blocks: [["INCLUDES", "Responsive design · content · contact or form."], ["GOOD FOR", "Launches, campaigns and focused services."]] },
     { kicker: "04 · WEB BUSINESS", title: "Your business, explained with clarity.", copy: "A multi-page presence to introduce your company, services and reasons to choose you.", blocks: [["INCLUDES", "Content structure · catalog · forms."], ["FOUNDATIONS", "Initial SEO, analytics and scalable structure."]] },
     { kicker: "05 · WEB PREMIUM", title: "A digital experience shaped around you.", copy: "Custom UI/UX and tailored features scoped with your team.", blocks: [["INCLUDES", "Custom experience · APIs · analytics."], ["SCOPE", "Defined by requirements and integrations."]] },
@@ -43,7 +43,7 @@ export function CatalogPage({
         <div className="catalog-toolbar">
           <div>
             <p className="eyebrow">{isEnglish ? "Commercial catalog" : "Catálogo comercial"}</p>
-            <h1 className="page-title">{isEnglish ? "NOVARY in 10 pages." : "NOVARY en 10 páginas."}</h1>
+            <h1 className="page-title">{isEnglish ? "FANAMI in 10 pages." : "FANAMI en 10 páginas."}</h1>
           </div>
         </div>
         <div className="container-inner">
@@ -64,13 +64,13 @@ export function CatalogPage({
                   </div>
                   {index === 0 ? (
                     <div aria-hidden="true" className="catalog-mockups">
-                      <div className="catalog-desktop"><span /><div>NOVARY<br /><small>DESIGN · DEVELOP · GROW</small></div></div>
-                      <div className="catalog-phone"><span /><div>N</div></div>
+                      <div className="catalog-desktop"><span /><div>FANAMI<br /><small>CREATE · CONNECT · GROW</small></div></div>
+                      <div className="catalog-phone"><span /><div>F</div></div>
                     </div>
                   ) : null}
                 </div>
                 <div className="footer-bottom">
-                  <span>NOVARY · DIGITAL STUDIO</span>
+                  <span>FANAMI · CREATIVE STUDIO</span>
                   <span>{String(index + 1).padStart(2, "0")} / 10</span>
                 </div>
               </article>

@@ -43,16 +43,16 @@ export function SiteFooter({ year, contactEmail, whatsappNumber, social }: Foote
       <footer className="site-footer">
         <div className="container footer-main">
           <div className="footer-about">
-            <Link aria-label="NOVARY, inicio" className="brand" href={prefix || "/"}>
-              <span aria-hidden="true" className="brand-mark">N</span>
-              <span>NOVARY<small>DIGITAL STUDIO</small></span>
+            <Link aria-label="FANAMI, inicio" className="brand" href={prefix || "/"}>
+              <span aria-hidden="true" className="brand-mark">F</span>
+              <span>FANAMI<small>CREATIVE STUDIO</small></span>
             </Link>
             <p>
               {english
                 ? "We design and build digital experiences that help businesses stand out, connect with customers and grow online."
                 : "Diseñamos y desarrollamos experiencias digitales que ayudan a las empresas a destacar, conectar y crecer online."}
             </p>
-            <p className="text-mint">DESIGN. DEVELOP. GROW.</p>
+            <p className="text-mint">CREATE. CONNECT. GROW.</p>
           </div>
           <div className="footer-column">
             <h3>{english ? "Explore" : "Explora"}</h3>
@@ -86,7 +86,7 @@ export function SiteFooter({ year, contactEmail, whatsappNumber, social }: Foote
         </div>
         <div className="container footer-bottom">
           <span>
-            © {year} NOVARY Digital Studio.{" "}
+            © {year} FANAMI Creative Studio.{" "}
             {english ? "All rights reserved." : "Todos los derechos reservados."}
           </span>
           <span>
@@ -96,7 +96,7 @@ export function SiteFooter({ year, contactEmail, whatsappNumber, social }: Foote
         </div>
       </footer>
       <a
-        aria-label={english ? "Contact NOVARY" : "Contactar a NOVARY"}
+        aria-label={english ? "Contact FANAMI" : "Contactar a FANAMI"}
         className="floating-contact"
         href={contactUrl}
         rel={externalContact ? "noopener noreferrer" : undefined}

@@ -149,13 +149,13 @@ export async function POST(request: Request) {
       from: sender,
       to: [recipient],
       reply_to: email,
-      subject: "Nueva consulta desde el sitio NOVARY",
+      subject: "Nueva consulta desde el sitio FANAMI",
       text,
     }),
   });
 
   if (!response.ok) {
-    console.error("NOVARY contact provider rejected a message", { status: response.status });
+    console.error("FANAMI contact provider rejected a message", { status: response.status });
     return Response.json(
       {
         message: english

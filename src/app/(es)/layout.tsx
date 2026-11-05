@@ -4,23 +4,23 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: "NOVARY — Digital Studio", template: "%s | NOVARY" },
+  title: { default: "FANAMI — Creative Studio", template: "%s | FANAMI" },
   description:
     "Diseñamos y desarrollamos experiencias digitales para empresas que quieren destacar, conectar y crecer.",
-  applicationName: "NOVARY Digital Studio",
+  applicationName: "FANAMI Creative Studio",
   verification: {
     google: "6rKvZd9XkAaPkztZ6N0iOC01UrQqhHMashCouQ5sdpk",
   },
   openGraph: {
     type: "website",
-    siteName: "NOVARY Digital Studio",
-    title: "NOVARY — Design. Develop. Grow.",
+    siteName: "FANAMI Creative Studio",
+    title: "FANAMI — Create. Connect. Grow.",
     description: "Diseño y desarrollo web para marcas listas para dar su siguiente paso.",
     locale: "es_PE",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NOVARY — Digital Studio",
+    title: "FANAMI — Creative Studio",
     description: "Diseño y desarrollo web para marcas listas para dar su siguiente paso.",
   },
   alternates: {
